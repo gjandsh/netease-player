@@ -1,5 +1,5 @@
 $(function(){
-	$.get('/lyric.json').then(function(object){
+	$.get('./lyric.json').then(function(object){
 		console.log(1)
 		let {lyric} = object
 		let array = lyric.split('\n')
