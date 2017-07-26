@@ -20,7 +20,7 @@ $(function(){
 	})
 
 	let audio = document.createElement('audio')
-	audio.src = '//dl.stream.qqmusic.qq.com/C400001hs89m3C5p3g.m4a?vkey=3BDCFB7B4C9964E543F19A51C9CDA42F2D7913F0946762463358CF0066D248A3428517B33E3CC45A9B1794FF54647ACEB58DBD9511D256C6&guid=4875181776&uin=0&fromtag=66'
+	audio.src = '//os5kf123g.bkt.clouddn.com/2d15%252Fd9fd%252F57cd%252F6679396a63ff496ecef0453b25612dfa.mp3'
 	let i=0;
 	let rotateDeg
 	audio.oncanplay = function(){
