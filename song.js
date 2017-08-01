@@ -25,20 +25,13 @@ $(function(){
 	let rotateDeg
 	audio.oncanplay = function(){
 		audio.play()
-		setInterval(function(){
-			rotateDeg=i*360/20;
-			i++
-		},1000)
 		$('.disc-container').addClass('playing')
 		$('.pointer').removeClass('leaveDisc')
 	}	
 	$('.icon-pause').on('click', function(){
 		audio.pause()	
-		// $('.cover').css("transform",`rotateZ(${rotateDeg+18}deg)`)
 		$('.disc-container').removeClass('playing')
 		$('.pointer').addClass('leaveDisc')
-		console.log(rotateDeg)
-		
 		
 	})
 	$('.icon-play').on('click', function(){
