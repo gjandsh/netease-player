@@ -1,11 +1,13 @@
 $(function(){
 	$.get('./lyric.json').then(function(object){
-		console.log(1)
-		let {lyric} = object
+		//console.log(object)
+		let {lyric} = object // 等同于lyric = object.lyric
 		let array = lyric.split('\n')
+		console.log(array)
 		let regex = /^\[(.+)\](.*)$/
 		array = array.map(function(string, index){
 			let matches = string.match(regex)	
+			console.log(matches)
 			if(matches){
 				return {time: matches[1], words: matches[2]}
 			}
