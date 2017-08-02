@@ -41,6 +41,9 @@
 	line-height: 2;
 	margin-top: 20px;
 }
+.song-description .lines{
+        transition:transform 0.3s;
+}
 .song-description h1{
 	color: white;
 	font-size: 18px;
@@ -54,6 +57,7 @@
 	overflow: hidden;
 }
 .song-description p.active{
+        color:white;
 }
 
 .page > .links{
