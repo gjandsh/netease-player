@@ -34,6 +34,7 @@ $(function () { // $(callback)监听DOM加载完成
 
 		let audio = document.createElement('audio')
 		audio.src = url
+		audio.play();
 		audio.oncanplay = function () {
 			audio.play()
 			$('.disc-container').addClass('playing')
