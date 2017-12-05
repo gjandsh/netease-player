@@ -36,11 +36,8 @@ $(function () { // $(callback)监听DOM加载完成
 		audio.src = url
 			audio.oncanplay = function () {
 			audio.play()
-			$('html').one('touchstart',function(){
-				audio.play();
-			});
-			$('.disc-container').addClass('playing')
-			$('.pointer').removeClass('leaveDisc')
+			// $('.disc-container').addClass('playing')
+			// $('.pointer').removeClass('leaveDisc')
 		}
 		$('.icon-pause').on('click', function () {
 			audio.pause()
@@ -53,6 +50,7 @@ $(function () { // $(callback)监听DOM加载完成
 			$('.disc-container').addClass('playing')
 			$('.pointer').removeClass('leaveDisc')
 		})
+		$('.icon-play').trigger('click');
 		let $title = $('.song-description>h1')
 		$title.text(singer.split('-').reverse().join('-'))
 		let $cover = $('.cover')
