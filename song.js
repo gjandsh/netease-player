@@ -51,7 +51,7 @@ $(function () { // $(callback)监听DOM加载完成
 			$('.pointer').removeClass('leaveDisc')
 		})
 		let $title = $('.song-description>h1')
-		$title.text(singer)
+		$title.text(singer.split('-').reverse().join('-'))
 		let $cover = $('.cover')
 		$cover.attr("src",coverUrl); 
 		let $page = $('.page')
