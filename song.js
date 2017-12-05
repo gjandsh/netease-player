@@ -6,7 +6,7 @@ $(function () { // $(callback)监听DOM加载完成
 			singer,
 			lyric,
 			url
-		} = object[songid] // 等同于lyric = object.lyric
+		} = object[songid-1] // 等同于lyric = object.lyric
 		let array = lyric.split('\n')
 		//console.log(array)
 		let regex = /^\[(.+)\](.*)$/
@@ -49,8 +49,7 @@ $(function () { // $(callback)监听DOM加载完成
 			$('.pointer').removeClass('leaveDisc')
 		})
 		let $title = $('.song-description>h1')
-		console.log(singer.split('-'))
-		$title.text(singer)
+        $title.text(singer)
 		setInterval(() => {
 			let seconds = audio.currentTime
 			let minutes = ~~(seconds / 60)
