@@ -1,11 +1,13 @@
 $(function () { // $(callback)监听DOM加载完成
 	let songid = location.search.match(/\bid=([^&]*)/)[1];
-	$.get('./songs.json').then(function (object) {
+	$.get('./latestSongs.json').then(function (object) {
 		console.log(songid)
 		let {
 			singer,
 			lyric,
-			url
+			url,
+			coverUrl,
+			coverBgUrl
 		} = object[songid-1] // 等同于lyric = object.lyric
 		let array = lyric.split('\n')
 		//console.log(array)
@@ -49,7 +51,11 @@ $(function () { // $(callback)监听DOM加载完成
 			$('.pointer').removeClass('leaveDisc')
 		})
 		let $title = $('.song-description>h1')
-        $title.text(singer)
+		$title.text(singer)
+		let $cover = $('.cover')
+		$cover.attr("src",coverUrl); 
+		let $page = $('.page')
+		$page.css("background-image","url("+coverBgUrl+")")
 		setInterval(() => {
 			let seconds = audio.currentTime
 			let minutes = ~~(seconds / 60)
